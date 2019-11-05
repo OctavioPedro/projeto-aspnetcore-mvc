@@ -2,12 +2,16 @@
 using SalesWebMVC.Models;
 using System.Linq;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SalesWebMVC.Models
 {
     public class Department
     {
+        [Display(Name = "ID")]
         public int id { get; set; }
+
+        [Display(Name = "Name")]
         public string name { get; set; }
         public ICollection<Seller> sellers { get; set; } = new List<Seller>();
 
